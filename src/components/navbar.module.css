@@ -1,0 +1,45 @@
+.nav {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.inner {
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 16px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 48px;
+}
+
+.logo {
+  display: block;
+  width: clamp(140px, 13.5vw, 260px);
+  aspect-ratio: 1232 / 453;
+  background-color: var(--white);
+  mask: url("/logo.png") center / contain no-repeat;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px clamp(24px, 2.5vw, 48px);
+}
+
+.link {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(20px, 1.35vw, 26px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  transition: opacity 0.15s;
+}
+
+.link:hover,
+.link[aria-current="page"] {
+  opacity: 1;
+}
+

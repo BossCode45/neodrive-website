@@ -1,0 +1,545 @@
+{
+ "appnews": {
+  "appid": 2804240,
+  "newsitems": [
+   {
+    "gid": "1845383656390048",
+    "title": "0.11.487 - New Track & Cosmetic Menu Improvements",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1845383656390048",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update brings a completely new customization menu as I prep for adding more cosmetics before release. You can now equip different tires and tow hook charms for both cars, and the menus are more readable, better navigable, and way cooler. Here are some example screenshots. The bad news is that your existing customization choices have been lost, but the good news is that you get to choose them again for each car.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/1248932eedcbca6a5a19c0cab44d05109148775d.png\"][/img][/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/6b73704dedf43bf0d3aa0e6c8155fd188ce59031.png\"][/img][/p][p]Rock Loop II has also been rebuilt. It's thematically the same (small twisty asphalt section before you ascend to the orange tracks) but it's longer.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/327598cb410a9edab0051205f02cfb0183419071.png\"][/img][/p][p]I also had to fix a bug where old ghosts for invalid versions of tracks would stay up unless I wiped the leaderboard. I’m embedding the application version when the ghost was saved in the leaderboard details now, but since I’m adding extra info, I’m force-uploading your local ghosts again to add details for each track on first load after this release. You won’t be able to see others’ ghosts until they load into the track and trigger the metadata refresh. You may also see your leaderboard rankings change if you’ve had an old ghost, but again, it’ll all be reset for 1.0 anyway.[/p][h2][b]All Changes[/b][/h2][list][*][p]rebuilt the car customization menus from scratch to be data-driven, split for each car, and more readable/polished[/p][/*][*][p]slowed drift/burnout nitro gain for the first three seconds of the race. this was because you could do both a burnout and a drift and double your nitro gain, which far outweighed the cost of slower acceleration due to reduced drive wheel traction[/p][/*][*][p]updated some button hitboxes for the main menu title screen[/p][/*][*][p]added an adaptive back button prompt to the end of the credits[/p][/*][*][p]added an adaptive back button to the main menu campaign/garage screen[/p][/*][*][p]embedded game version in race ghosts[/p][/*][*][p]updated the shader for wheel spokes and blurred spokes to keep them from flickering at certain angles[/p][/*][*][p]added more baseplates to Vapor City[/p][/*][*][p]removed some of the extra docks area and converted another part of it to a beach[/p][/*][*][p]added stairs in Vapor City going down to the docks/beach area[/p][/*][*][p]save the last selected UI item in some of the menus[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1791064522,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1844751498232826",
+    "title": "0.11.462 - New Old Tracks, Wheels & UX Improvements",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498232826",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]I remade a couple very old tracks and added several new features by popular request.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/9d7463251827c341bb62446843e30e00cf90256b.png\"][/img][/p][list][*][p]redesigned/rebuilt Turbine Climb[/p][/*][*][p]redesigned/rebuilt Rock Loop I[/p][/*][*][p]added a new wheel and achievement, Amphibious[/p][/*][*][p]added a separate Camera tab to the game settings menu and moved related items into it[/p][/*][*][p]added a slider for base chase cam FOV[/p][/*][*][p]added a slider for base hood cam FOV[/p][/*][*][p]added a toggle option for camera distance changes based on car acceleration[/p][/*][*][p]added millisecond precision to the post-race scoreboard[/p][/*][*][p]optimized the shader for wide four-lane roads[/p][/*][*][p]added a “distance driven in miles/km” line to the post-race stats[/p][/*][*][p]re-recorded the Buoy Run author ghost because the layout changed after I recorded it the first time[/p][/*][*][p]fixed a bug where the percentile info on the post-race scoreboard wouldn’t be updated if the time improved[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1790642769,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1844751498230064",
+    "title": "0.11.456 - UX Improvements & Bugfixes",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498230064",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list]\n[*] allow respawning via the hotkey anytime after finishing\n[*] fixed a visual bug where input prompts would overlap each other in the camera controls bar if they were two keys mapped to an axis\n[*] added an end cap mesh to some orange/magnetic track sections in the campaign so they wouldn’t just end and let you see into them with the nodraw backfaces\n[*] fixed a bug where clicking on a locked Next Track button would put you in an infinite loading screen\n[*] fixed three spots where Water Snake I would clip into the city\n[/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1790549290,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1844751498223410",
+    "title": "0.11.452 - CAMPAIGN COMPLETE",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498223410",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]All 64 tracks are finished now. It’s a bit surreal. I still need to go back and rework a few of them to be up to the standards of the newer tracks (looking at you, Rock Loop and Puddlejumper...) but I wanted to hit this milestone of completing every single track before going back and polishing. There’s still a lot to do, and a lot of space for community feedback especially on the newer tracks, but it’s big progress! Design for some of these new tracks has been informed by community feedback and suggestions.[/p][p][/p][h2]All Changes[/h2][list][*][p]Added a new Stage 4 track, Fourth Inversion. One section, where you go up the side of a building, invert to go over the top, and then invert again to drop back down, was a suggestion by a community member, Verily.[/p][/*][*][p]Added a new Stage 4 track, Buoy Run[/p][/*][*][p]Added a new Stage 4 track, Ledge Drop[/p][/*][*][p]Added a new Stage 4 track, Bridge Run II. The jump from the docks onto the bridge was also suggested by Verily.[/p][/*][*][p]Updated the Arroyo Seco Parkway track and moved it to Stage 4, added medals and removed its medal-exempt property[/p][/*][*][p]Added a new Stage 4 track, Racing Season[/p][/*][*][p]Made Lake Tangle II multilap[/p][/*][*][p]made the Lancier Test Track three laps[/p][/*][*][p]Made the pre-race camera linger a bit more on the start line before moving to orbit other checkpoints[/p][/*][*][p]Removed the need to hold clutch when respawning in MT mode now that hot laps don’t exist anymore[/p][/*][*][p]Slightly updated tire grip dynamics to ignore lower spring load only when drifting, which makes the car more predictable when drifting over small crests without leaving the ground[/p][/*][*][p]Fixed flickering rocks in Monument Loop[/p][/*][*][p]Fixed flickering rocks in Autocross II[/p][/*][*][p]Don’t play unlock animations for stages that start unlocked[/p][/*][*][p]Fixed a bug where hitting the clutch without shifting gears would count as a downshift to the nitro-farming countermeasures[/p][/*][*][p]Fixed a visual bug where the respawn button prompt would persist across pause menu opens once the respawn button was hovered once[/p][/*][*][p]Removed a skybox seam[/p][/*][*][p]Added Steam rich presence to show the current level name[/p][/*][*][p]Removed the Test Track stage from the Alpha group (the Lancier Test Track’s layout is nearly identical)[/p][/*][*][p]Removed the Alpha Stages group. End of an era, man!\n[/p][/*][/list][h2][b]Updated “Need to have” list for 1.0[/b][/h2][list][*][p][strike]Enable TCS for the Lancier if using arrow keys, but vastly reduce grip limit nitro[/strike][/p][/*][*][p]Finish modeling Vapor City (mostly just need to do the city baseplates like in the main island)[/p][/*][*][p][strike]Finish building the 64 track campaign[/strike][/p][/*][*][p]Remake a few old tracks[/p][/*][*][p][strike]Take out all hot lap tracks[/strike][/p][/*][*][p]Improve customization UI and split it between the Exo-v2 and the Lancier[/p][/*][*][p][strike]Show how many people you beat globally on the race end screen[/strike][/p][/*][*][p][strike]Have more fanfare for getting a world record[/strike][/p][/*][*][p]Display unrecorded player times as N/A instead of 00/00/00[/p][/*][*][p][strike]Set exhaust backfire light position/count properly for the Lancier[/strike][/p][/*][*][p]Model end caps for black cutout border wall-less tracks[/p][/*][*][p]Add sunset and nighttime lighting to Vapor City. This is partially done but I still need to update some of the building illum textures. I’ve been putting it off for a very stupid reason - a week ago I almost finished the illum texture for the night city, and then accidentally saved over it without making a Git commit. Lots of swearing, 40 minutes of meticulous digital painting down the drain, and I don’t have the energy to go back and redo all of it yet.[/p][/*][/list][p]\n[/p][p]1.0 is slated for the day after Christmas, exactly 6 months from the Early Access launch.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1790314487,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1844751498217062",
+    "title": "0.11.432 - Stage I Complete",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498217062",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update brings new leaderboard visuals, a small drift nitro gain change and rounds out the last of the Stage 1 tracks with two more somewhat interesting multilap ones. The Lancier gets its first and perhaps only track where it can drift on dirt instead of grass, which gives it different handling. Try it out! You may be surprised...[/p][p][/p][h2]New Leaderboard[/h2][p]The postrace screen now shows a leaderboard that dynamically updates if you set a new time. You can toggle its visibility in the game settings.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/dea647f798e03224a260dcba532dfb389b67659b.jpg\"][/img][/p][p][/p][h2]Drift Changes[/h2][p]The car now only gets a trickle of nitro if drifting at a shallow angle, which is defined as less than 15 degrees. You shouldn't notice any difference if you're not trying to drift in straight lines, but let me know how this feels.[/p][p][/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/b67b79a1302a77e4cfed20c99a8927db55f04af4.png\"][/img][/p][p]Autocross II[/p][p][/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/5dfa8259518f2ff3e4bd646658f850f7dbec6271.png\"][/img][/p][p]Cherry Ring[/p][p][/p][h2]All Changes[/h2][list][*][p]added a new Stage 1 track, Cherry Ring[/p][/*][*][p]added a new Stage 1 track, Autocross II[/p][/*][*][p]improved track consistency on Third Inversion[/p][/*][*][p]added a dynamically updating leaderboard to the postrace screen[/p][/*][*][p]improved car behavior when driving on a ramp off a magnet track[/p][/*][*][p]improved blurred-background UI element visuals[/p][/*][*][p]moved the “run in background” option from Graphics to Gameplay[/p][/*][*][p]added a logo to the main menu screen[/p][/*][*][p]remade Valley Descent as City Descent[/p][/*][*][p]added wraparound navigation to the pre-race menu[/p][/*][*][p]fixed a visual bug where track load buttons would start highlighted[/p][/*][*][p]removed purple overlay on thumbnail for selected track buttons in the main menu[/p][/*][*][p]updated the thumbnail for Double Loop[/p][/*][*][p]updated Halfpipe Intro to have a shorter runup[/p][/*][*][p]very slightly increased drift stability for the Lancier (drift stability is how much the back end goes out when you give it gas while drifting)[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1790126362,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "mod_reviewed",
+     "ModAct_1751555285_1790127671_0",
+     "mod_require_rereview"
+    ]
+   },
+   {
+    "gid": "1844115010500451",
+    "title": "0.11.420 - MORE TRACKS & bugfixes",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010500451",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "Fixed a rather egregious bug that made the docks area disappear. That would have made Autocross I a bit difficult. It also made me release two easyish tracks I'd been working on early, since I only noticed the issue after I'd already bundled them into the game and figured I might as well release them.\n\nThis update also rounds out the Stage 2 campaign. Eight tracks to go before all 64+ are complete!\n\n[h2]All Changes[/h2]\n\n[list]\n[*] added a new Stage 1 track, Boulevard Tour\n[*] added a new Stage 2 track, Bridge Run I\n[*] fixed missing ground in the docks area\n[*] optimized tree colliders\n[*] removed Hot Lap tutorial, made the Tutorial track medal exempt\n[*] fixed a bug where global leaderboards would show up in medal exempt tracks\n[*] fixed collision bugs in the general + manual tutorials\n[*] improved replay car sound effect dopplering\n[*] fixed a visual issue where replay car headlights would show on water\n[/list]\n",
+    "feedlabel": "Community Announcements",
+    "date": 1789971206,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1844115010500184",
+    "title": "0.11.414 - Third Inversion",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010500184",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update brings the last track of Stage 3 - the aptly named Third Inversion. I may make some more tweaks to existing stage 3 tracks leading up to launch, but for the first time, a complete stage of 16 tracks is in NEODRIVE. Double Loop has also been converted to a multilap track.[/p][p](Fourth Inversion is coming later, I need to figure out how to really outdo myself with it)[/p][h2]All Changes[/h2][list][*][p]added a new Stage 3 track, Third Inversion[/p][/*][*][p]fixed a bug where UI menu navigation could buffer a shift into reverse when starting the car for the first time in a track[/p][/*][*][p]removed car headlights illuminating the surface of dark ocean water[/p][/*][*][p]improved ocean horizon render distance[/p][/*][*][p]switched Double Loop to a two-lap track[/p][/*][*][p]switched Double Loop time of day to sunset[/p][/*][*][p]added track supports to Double Loop[/p][/*][*][p]flipped checkpoint renderers to properly face the player's movement direction in Double Loop[/p][/*][*][p]added some more small grassy areas to Vapor City[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1789959023,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1844115010497944",
+    "title": "0.11.407 - Mobius Trip",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010497944",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update's first new track, Mobius Trip, was a suggestion by a community member, CurtDog420. It's the first track that takes place at night in Vapor City (night lighting still WIP).[/p][p]The second track, Alley Scramble, is rather difficult and takes place in Vapor City during a blue sunset, which is a reference to a musician I like, Parannoul. Due to the uneven roads it's kinda hard to take a perfectly smooth line, and I wanted to lean into the messy driving through more narrow streets for this track. It's Stage 4 for a reason. Pretty fun though![/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/f88e1a02208083f9b9571a6e0577296f8c99437a.png\"][/img][/p][p]I also added a new starting wheel, commissioned from an artist friend of mine. Thanks Bukie.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/51890703ab0052e26becb7b2bac3d7453f429203.png\"][/img][/p][h2]All Changes[/h2][list][*][p]Added a new Stage 2 track, Mobius Trip[/p][/*][*][p]Added a new Stage 4 track, Alley Scramble[/p][/*][*][p]Added new wheels, \"Goopert\"[/p][/*][*][p]Moved Rockfall Ring to Stage 3[/p][/*][*][p]Fixed mipmap sampling settings to smooth some distant road textures[/p][/*][*][p]Added automatic nighttime illumination to Vapor City[/p][/*][*][p]Fixed tunnel wall mesh collision in Monument Loop[/p][/*][*][p]Updated internal car magnet track settings to allow optional stiffer suspension on magnet tracks (because the Lancier was bottoming out on them)[/p][/*][*][p]Updated car nitro gain behavior, see below[/p][/*][/list][h2]Car Nitro Gain Behavior[/h2][p]These changes are intended to give more nitro for basic actions while still avoiding nitro farming by rapidly toggling gears. When you shift, I make a small check to see if you've just shifted in the opposite direction recently, and if so, I reduce the amount of nitro you're getting unless it's counted as a valid, intended shift. If not, you'll see the text (EARLY) after your nitro point attribution alert at the bottom of the screen.[/p][p]For upshifts, this means that unless you shift at redline, you'll only get partial nitro if you've just downshifted or if you're shifting before redline.[/p][p]For downshifts, this means that unless you heel-toe. you'll only get partial nitro if you've just upshifted.[/p][p]If you drive normally you won't see any change. I was actually able to use that check to be a little more generous with the nitro on downshifting as well.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1789854557,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1844115010490992",
+    "title": "0.11.397",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010490992",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update contains a big fix for magnetic tracks. My original physics alterations for the car on magnet tracks were working in all cases except one, where the track twisted on its axis (like going from right side up to upside down) without pitching or bending in any other way. If the car was far to one side of the track while this was happening, the ground would drop away from it and the car would fall off the track.[/p][p]After trying and failing with a bunch of horribly complex trig to get the change in track surface position based on the car’s offset and the rate of change of spline curvature over the last three physics steps (the splines don’t have a built-in derivative function so I had to try to get it other ways) I gave up.[/p][p]The new solution is incredibly stupid: a really strong giant invisible spring that pulls the car onto the magnetic track. It actually works really well and has the bonus of snapping the car onto the track when it’s landing after a jump (e.g. Second Inversion). It feels kinda bad to be doing it like that instead of with actual math, but whatever man, the code is clean and it just works. On to other things.[/p][p][/p][h3][b]All Changes[/b][/h3][list][*][p]remade Water Snake I to work with the new downtown area and not clip through buildings[/p][/*][*][p]added a voice line for when you get a new world record[/p][/*][*][p]removed Night Run (in-progress track) from game as it was mistakenly added[/p][/*][*][p]improved magnet track behavior during twists and when landing on the track[/p][/*][*][p]added city baseplate meshes to some docks areas[/p][/*][*][p]fixed a bug where stalling in the air could halt the car[/p][/*][*][p]fixed a bug where tapping handbrake to halt car rotation in the air sometimes wouldn’t register[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1789625799,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1843481262700836",
+    "title": "0.11.387- Small Bugfixes",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262700836",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list]\n[*] show more time info when getting a new record (time below your previous time)\n[*] fixed a bug where you could build a full boost meter from the start line in an automatic transmission\n[*] fixed bad gold override time on Lake Tangle III\n[/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1789367642,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1843481262694185",
+    "title": "Lancier TCS",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262694185",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "- Added TCS on keyboard for Lancier, but decreased nitro gain when using keyboard and at grip limit\n- Updated LODs for cherry blossom trees",
+    "feedlabel": "Community Announcements",
+    "date": 1789107487,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1843481262693709",
+    "title": "Halfway through Early Access",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262693709",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]Hello! As of this week, we’re about three months into the six months that I allotted for Early Access. I’m slightly ahead of schedule to finish the campaign. There are about 12 tracks left to build, and I’ll need to remake a few of the very old tracks like Rock Loop 1-2 and Turbine Climb, but I don’t foresee that taking up another three months. I have other features I want to add as well, which should take up some more of the remaining time. [/p][p]Here’s the current roadmap for 1.0, roughly sorted by priority, taken from my project planning backlog.[/p][h3][b]Need to have for 1.0[/b][/h3][list][*][p]Enable TCS for the Lancier if using arrow keys, but vastly reduce grip limit nitro[/p][/*][*][p]Finish modeling Vapor City[/p][/*][*][p]Finish building the 64 track campaign[/p][/*][*][p]Remake a few old tracks[/p][/*][*][p]Take out all hot lap tracks[/p][/*][*][p]Improve customization UI and split it between the Exo-v2 and the Lancier[/p][/*][*][p]Show how many people you beat globally on the race end screen[/p][/*][*][p]Have more fanfare for getting a world record[/p][/*][*][p]Display unrecorded player times as N/A instead of 00:00:00[/p][/*][*][p]Set exhaust backfire light position/count properly for the Lancier[/p][/*][*][p]Model end caps for black cutout border wall-less tracks[/p][/*][*][p]Add sunset and nighttime lighting to Vapor City[/p][/*][/list][h3][b]Nice to have for 1.0[/b][/h3][list][*][p]Remap car UVs to not be terrible[/p][/*][*][p]Add unlockable paint jobs (depends on the above)[/p][/*][*][p]Dashboard UI size slider[/p][/*][*][p]Add unlockable rims[/p][/*][*][p]Add more tow hook charms[/p][/*][*][p]Use perceptual audio settings sliders[/p][/*][/list][h3][b]Will not have for 1.0[/b][/h3][list][*][p]Multiplayer. I know, sorry. I’d have to completely rebuild a lot of the game code. This is my first 3D game, I’ve never written multiplayer game netcode before, and I’d rather keep Neodrive as a sharp single-player experience than something with bad, beginner netcode. I want to make a multiplayer racing game after this, but I would need some more time to learn.[/p][/*][*][p]Track editor. I’m not completely ruling this out for sometime in the future, but this would be its own very large months-long undertaking. I’d need a complete system for not only building and saving tracks, but uploading them to the Steam workshop. Also, the spline tool I’m using hasn’t implemented runtime terrain modification yet. It’s on their roadmap though.[/p][/*][*][p]Mod support. Again, not something I’m completely ruling out for the future with custom vehicle models and liveries, but I’d need to build a pipeline for loading arbitrary assets at runtime, and that’s something I want to take my time and do right. Not that I would have to get it [i]completely [/i]right the first time, but based on experience at my day job, API contracts and file schemas that are defined early on with little thought have a nasty habit of sticking around and making your life hard if you don’t take your time to plan out use-cases beforehand.[/p][/*][/list][p]If you have anything to add to this, or you feel my priorities are misaligned with how you feel about Neodrive, please let me know in the comments. Thanks for all being early adopters! Your constant support and feedback has helped, and is still helping, shape this into a very cool game.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1789085147,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1843481262690777",
+    "title": "0.11.375 - Bugfixes & New Tracks",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262690777",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[h2]New Content[/h2][list][*][p]Added a new Stage 3 Lancier track, Dockside Run[/p][/*][*][p]Added a new Stage 4 Lancier track, Park Path[/p][/*][/list][h2]All Changes[/h2][list][*][p]Smooth steering inputs more if the currently requested angle would cause a traction break on the Lancier, which should make it easier to control[/p][/*][*][p]Properly play and pause tire skid noise when watching replays[/p][/*][*][p]Pause tire smoke movement when a replay is paused[/p][/*][*][p]Fixed a bug where buffered shift inputs could sometimes be dropped[/p][/*][*][p]Smoothed camera movement when the car transitions from drifting at an angle to not being grounded[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1789004029,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "mod_reviewed",
+     "ModAct_1426387032_1789004944_0",
+     "mod_require_rereview"
+    ]
+   },
+   {
+    "gid": "1843481262688243",
+    "title": "0.11.370",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262688243",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "- fixed a bug where the vsync preference wasn't being applied",
+    "feedlabel": "Community Announcements",
+    "date": 1788938165,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1843481262687971",
+    "title": "0.11.368 - Small bugfixes",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262687971",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[*] Reverted an increased sensitivity change on shifting inputs that caused some shifts to be reversed due to stick bounceback\n[*] Fixed an issue where the game could lock if alt-tabbing during a scene transition\n[*] Updated water lighting in some Vapor City based levels\n\nThe stick sensitivity is back to the baseline before this update. If you liked how it was before this patch, you can increase your shift input sensitivity in the Keybinds menu.",
+    "feedlabel": "Community Announcements",
+    "date": 1788927442,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1843481262687834",
+    "title": "0.11.366 - Lancier & Vapor City Tracks",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262687834",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This is the biggest update for NEODRIVE so far! It contains a giant new area, a completely new car, and new tracks for both the city area and the Lancier specifically.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/4dfc24530eb7fe0655c69a6b3366d840048abee0.png\"][/img]3-1 [i]Lancier Test Track[/i][/p][p]Depending on how much the community likes the Lancier, I may skew the rest of the campaign towards tracks for it instead of the muscle car.[/p][p]Also new to this update is the base track area of Vapor City. Several new and existing tracks have been set in it. It contains two main islands (in different stages of completeness), moving trains, and many twisty streets.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/310eb46bd2e967a1423f78767bd093e2462b79d3.png\"][/img][i]3-14 Blossom Rush[/i][/p][p]I homogenized the driving model in edge cases, like where the car's front two wheels are off the ground. I'm cheating physics a bit in favor of the player and still applying steering traction as if all wheels are planted.[/p][p]Another big change is to nitro gain. It's now harder to rush to third gear and farm nitro, and I may revisit this more before 1.0 depending on community feedback.[/p][p]The demo has also received all the same optimizations and quality of life changes as the base game.[/p][p]Now, on to all changes.[/p][h3][b]New Content[/b][/h3][list][*][p]Added a completely new car, the Lancier. Its physics are different from the muscle car (internally, the Exo-v2), so enjoy pushing it to its limits in new ways! It only has five forward gears, and is much less stable in a drift, but rewards clean driving at the edge of its tires’ grip.[/p][/*][*][p]Added grip limit effects for the Lancier[/p][/*][*][p]Added a new base area, Vapor City[/p][/*][*][p]Added an optional voice for when the boost is ready[/p][/*][*][p]Added a third-person replay camera, similar to the default third-person chase camera[/p][/*][*][p]Added a new track, Lancier Skidpad[/p][/*][*][p]Added a new track, Lancier 8[/p][/*][*][p]Added a new track, Lancier Test Track[/p][/*][*][p]Added a new track, Blossom Rush[/p][/*][*][p]Added new default available wheels, Tokohama[/p][/*][*][p]Added a new tow hook charm, 全村的希望 (unlockable via the Locally Hated achievement)[/p][/*][/list][h3][b]Driving Dynamics Changes[/b][/h3][list][*][p]Moved the Exo-v2’s peak power closer to the redline[/p][/*][*][p]Improved car behavior on magnet tracks[/p][/*][*][p]Standardized car behavior when the steering axle loses ground contact[/p][/*][*][p]Only proc the Clean Landing effect if the car has performed a stunt that airtime[/p][/*][*][p]Give nitro for stunts[/p][/*][*][p]Made it easier to perform a burnout if holding handbrake[/p][/*][*][p]Removed clutch kicks (holding handbrake to widen a drift is more controllable and reliable)[/p][/*][*][p]Only give nitro while upshifting if the needle is within 500 RPM of the redline[/p][/*][*][p]Only give nitro while downshifting if braking, or downshifting to a higher point in the power band[/p][/*][*][p]Use a prop hitter proxy for the car to avoid minute slowdowns when hitting kickable prop objects with mass (e.g. cones)[/p][/*][*][p]Disable automatic boost upshifting if the player downshifts before boost ends[/p][/*][*][p]Standardized transmission behavior when boosting in reverse[/p][/*][*][p]Increased Exo-v2 suspension travel distance[/p][/*][*][p]Updated car turtling behavior to allow easier flipping back onto wheels[/p][/*][*][p]Updated ground type-based handling changes at runtime[/p][/*][/list][h3][b]Track Updates[/b][/h3][list][*][p]Updated all tracks in the Docks area to be set in Vapor City[/p][/*][/list][list][*][p]Updated the Water 8 track[/p][/*][*][p]Updated the Overhang track[/p][/*][*][p]Updated the Hydroplane track[/p][/*][*][p]Updated the Monument Loop track (track spline is unchanged, start was moved back, it’s a route track now)[/p][/*][*][p]Updated the Rockfall Ring track[/p][/*][*][p]Updated the Night Loops track[/p][/*][*][p]Updated the S Bends track[/p][/*][*][p]Updated the Water Snake I track[/p][/*][*][p]Updated the Water Snake II track[/p][/*][*][p]Updated the Halfpipe Route track[/p][/*][/list][h3][b]Bugfixes[/b][/h3][list][*][p]Fixed bugs with flying respawn[/p][/*][*][p]Fix chase camera distance calculation when car is drifting sideways[/p][/*][*][p]Fixed bugs with interactive tutorials[/p][/*][*][p]Fixed black centerlines on orange tracks disappearing at low LODs[/p][/*][*][p]Fixed some visual distance calculation issues with car suspension[/p][/*][*][p]Fixed a bug where tire skid noises would play on replay pause[/p][/*][*][p]Fixed ghost car and replay car brake lights not lighting up[/p][/*][/list][h3][b]Visual & Quality of Life Changes[/b][/h3][list][*][p]Added a logo fade when moving between any scene[/p][/*][*][p]Render rings on stunts along with vapor trails[/p][/*][*][p]Embedded handbrake data in replays[/p][/*][*][p]Show speed/gear stats in replay[/p][/*][*][p]Made the replay car play a shift noise when shifting[/p][/*][*][p]Fade audio when moving between levels[/p][/*][*][p]Added brake disc glow when holding handbrake[/p][/*][*][p]Use real-time calculated suspension pose on replay cars[/p][/*][*][p]Softened tire skid noise attack/decay on the replay car[/p][/*][*][p]Only show replay brake/boost flares on the chase camera[/p][/*][*][p]Updated the ocean water material[/p][/*][/list][h3][b]Optimizations[/b][/h3][list][*][p]Optimized wheel raycasts by 2x[/p][/*][*][p]Optimized motion blur[/p][/*][*][p]Optimized polycount and batching on black-border wall-less track pieces[/p][/*][*][p]Optimized polycount and batching on red-rail metal grating track pieces[/p][/*][*][p]Optimized polycount and batching on eight-lane street track pieces[/p][/*][*][p]Optimized water in the docks area to not use real-time reflections[/p][/*][*][p]Optimized shader for the dark tarmac track[/p][/*][/list][p][/p][h2]Upcoming Price Increase[/h2][p]User feedback has unanimously priced this game at $15. I don't think NEODRIVE is there yet, but I will be increasing the game’s base price to $7.49 USD soon. Since the launch of Early Access in June, I’ve added:[/p][list][*][p]A completely new car[/p][/*][*][p]A completely new area[/p][/*][*][p]Over a dozen new tracks, with more on the way[/p][/*][*][p]The ability to upload, download and race Steam leaderboard ghosts[/p][/*][/list][p]The 1.0 launch will also have a decent launch discount.[/p][p]Thanks for following this NEODRIVE’s development with me and providing so much feedback already. If you’ve still only played the demo and are thinking of picking up the full game, get it while it’s still under $5! Tell your friends etc.[/p][p][/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1788922882,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "mod_reviewed",
+     "ModAct_1426387032_1788923255_0",
+     "mod_require_rereview"
+    ]
+   },
+   {
+    "gid": "1841579228667850",
+    "title": "Devlog | Lancier Reveal",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228667850",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[previewyoutube=\"-IoJEfGojcg;full\"][/previewyoutube][p]I'm still working on the next update, which will be large and involve a leaderboard wipe (sorry, I gotta nerf that nitro rushing/shift spam). Here's a little teaser of something that will be in it, though! A completely new car with very different handling.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1787299254,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1840944183772699",
+    "title": "0.10.245 - Water Snake II",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183772699",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]This update contains a new track, Water Snake II. It's a slightly tweaked version of the track segments in the Manual Tutorial level.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/7c0bee9bc5742cad5d2eba60ed85bb00c0858055.png\"][/img][/p][p]Also, I rebuilt parts of Water 8 with optimized meshes and removed a skip. It's now a 2-lap track, so I had to wipe the leaderboards.[/p][h2]All Changes[/h2][list][*][p]added a new Stage 3 track, Water Snake II[/p][/*][*][p]rebuilt Water 8[/p][/*][*][p]fixed a bug in the Manual Tutorial[/p][/*][*][p]made some tutorial stages require performing the same action three times successfully[/p][/*][*][p]use dark purple instead of dark gray for some metal pieces[/p][/*][*][p]disable clean landings right after flying respawns[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1786495522,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1840310314353159",
+    "title": "0.10.241 - Ghost & Replay Improvements",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314353159",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][img src=\"{STEAM_CLAN_IMAGE}/45829248/44195f2191549f3c06779994d40eb5b79c534395.png\"][/img][/p][p]This update improves the replay and leaderboard ghost experience. The shift indicator addition is in preparation for refactoring of the nitro gain to eliminate boost farming, but that will come in a later update with plenty of warning.[/p][h2]All Changes[/h2][list][*][p]add speed, RPM and gear indicators to replay chase cam[/p][/*][*][p]pause game on focus loss[/p][/*][*][p]when racing a leaderboard ghost, split comparisons are shown relative to the ghost instead of your own time (some ghost splits may still be bugged, YMMV but most should work)[/p][/*][*][p]have replays default to the third person chase cam[/p][/*][*][p]flash the gear indicator when close to the redline[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1786424616,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1840310314350402",
+    "title": "0.10.234 - Replay Improvements",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314350402",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]I added a chase cam to the replay viewer. It's now the default for watching replays and will have almost all the effects as the normal race cam. I probably won't add a dashboard to the replay viewer, but I'm going to add some speed/RPM/gear stats in the next update.[/p][p][/p][h2]All Changes[/h2][list][*][p]Don't emit tire smoke if underwater[/p][/*][*][p]Add a replay chase cam[/p][/*][*][p]Fix emission on replay/ghost car brake lights[/p][/*][*][p]Standardize replay car boost effect with default car[/p][/*][*][p]Fix gearshift audio on replay cars[/p][/*][*][p]Fix speed/RPM calculations for gearbox noise audio on replay car[/p][/*][*][p]Add exhaust backfiring to replay car[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1786341441,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1840310314344055",
+    "title": "0.10.227",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314344055",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "- fixed a bug where track segments wouldn't render properly in Lake Tangle III",
+    "feedlabel": "Community Announcements",
+    "date": 1786088200,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1840310314343795",
+    "title": "0.10.226 - Inverse Camber",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314343795",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][img src=\"{STEAM_CLAN_IMAGE}/45829248/53a6c4fa64664dae56b6d3987b05b452bb5419a0.png\"][/img][/p][p]This is the first new-track update that doesn't contain a video of me running it, because now there are leaderboard ghosts you can watch.[/p][list][*][p]added a new Stage 1 track, Inverse Camber[/p][/*][*][p]fixed some bugs related to leaderboard ghosts[/p][/*][*][p]re-recorded some personal ghosts that were old and/or corrupted[/p][/*][*][p]added the \"Locally Hated\" achievement and corresponding wheels[/p][/*][*][p]added the \"Jinba Ittai\" achievement and corresponding wheels[/p][/*][*][p]only upload ghosts if necessary, not each race start/each finish[/p][/*][*][p]properly handle some file I/O asynchronously to remove lag spikes at race end[/p][/*][*][p]stop playing ghosts when respawning[/p][/*][*][p]fixed a display bug with locked cosmetics[/p][/*][*][p]embed currently applied wheels in Ghost recordings[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1786077375,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1840310314341137",
+    "title": "0.10.217 - Community Leaderboard Ghosts",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314341137",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]Leaderboard ghosts are here! Struggling to see how someone got a certain time? Want to pace yourself against one of your friends? Now you can.[/p][p]You can now view and play against other people's ghosts on the leaderboards by opening the new Leaderboards menu in-race and selecting their entry. To switch or remove the leaderboard ghost you're competing against, just select Reload Race from the pause menu.[/p][p][img src=\"{STEAM_CLAN_IMAGE}/45829248/25ba63b3bcbf43a097d9854c906fba77f4a70a54.png\"][/img][/p][p]There may be some lingering bugs because a [i]lot[/i] of Steam-related code has changed, so bear with me. Some of them have been very tricky to find and test, and I want to get this code out soon, so your ghosts can be automatically uploaded along with your leaderboard scores and fill out the leaderboard for testing.[/p][p]Please note that right now, nobody's scores will have ghosts attached to them, and you may see the \"no ghost\" message for a score.[/p][p]When you load into a track, your best ghost will be automatically uploaded to Steam and [b]only then[/b] will it be available to others.[/p][h2]All Changes[/h2][list][*][p]made in-race ghosts silent[/p][/*][*][p]fixed emissive UV coordinates on new optimized track pieces[/p][/*][*][p]added ghost score submission when loading and finishing a track[/p][/*][*][p]added a leaderboard viewer to the pre-race startline menu screen[/p][/*][*][p]completely refactored Steam backend from Facepunch Steamworks to Steamworks.NET[/p][/*][*][p]fixed a rare bug where timers wouldn't care whether they were paused or not[/p][/*][*][p]removed the (You) tag when viewing a ghost[/p][/*][/list][h2]Next Up[/h2][list][*][p]embedding cosmetics, shift mode, and input method in Ghost replays[/p][/*][*][p]more tracks, as always[/p][/*][*][p]more cosmetics[/p][/*][*][p]more achievements[/p][/*][/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1786003077,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1839676055886831",
+    "title": "0.10.203 - Windmill Run",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839676055886831",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][/p][previewyoutube=\"vFr6JrylAEs;full\"][/previewyoutube][p]I added a new track to Stage 0, Windmill Run. It's a long, winding high-speed track that takes you from one end of the desert area to another.[/p][h2]All Changes[/h2][list][*][p]increased readability of car customization UI[/p][/*][*][p]Added a new track, Windmill Run[/p][/*][*][p]added keyboard controls for in-game cameras[/p][/*][*][p]made the controller vibrate less if the car is hydroplaning[/p][/*][*][p]optimized the Lake Tangle series of tracks[/p][/*][*][p]made Respawn and Flying Respawn behavior consistent across physics timesteps[/p][/*][*][p]increased collider polycount on a back curve of Lake Tangle 0[/p][/*][*][p]turned off TCS if using a racing wheel[/p][/*][/list][p]I improved the framerate issues I described in the last post by decreasing the draw count amounts by half on several of the Lake Tangle tracks. [/p][p]I also decreased controller vibration when the car is hydroplaning to give more haptic feedback on a driving state change. Hydroplaning makes the car become quieter so after a few seconds you'll just hear the rush of air and water, and wanted the gameplay feel to reflect that.[/p][p]Also, when using a racing wheel, you don't need to press a button to drift now. It was kind of unwieldy, and the increased range of motion you get from a wheel means that you can keep the car from drifting if you don't steer at full lock every time.[/p][p][/p][h2]Grip Limit Nitro[/h2][p]You may sometimes have seen nitro gained for something called \"Grip Limit.\" This mechanic, while very minor, has been in Neodrive for a long time. To understand it, you need to understand how I implement the TCS (Traction Control System).[/p][p]If you're driving fast and turn the steering wheel too far, the tires won't be able to redirect all of the car's velocity, and they will start to skid. This is true both in real life and in Neodrive. So, you need some kind of traction control system.[/p][p]In real life, if the car detects that the requested turn angle is going to send it into a skid, it reduces power to the wheel that's going to break traction (sort of, I'm not an engineer).[/p][p]In Neodrive, I control every aspect of the car's physics, and know exactly which turn angle is going to make the car break its tire traction at a given speed. So if the user tries to turn beyond that limit, the TCS light goes on and the turn angle is limited to [i]almost [/i]the angle that will break traction, but not quite. The car is also slowed down a slight amount to gradually decrease the turning radius as the user presumably intends.[/p][p]However, if the user themselves inputs a steering angle that is close to breaking traction/invoking TCS, but not quite, that's [b]Grip Limit[/b] - literally, steering at the limit of the car's grip. If TCS weren't enabled, the car would go into a skid if the user turned any further.[/p][p]If you can do this, you get nitro, because this handling model is fairly flexible and could also support a car that's grippier at high speeds but has no TCS and loses more speed in a drift, thus incentivizing good racing lines and grip driving to get a good time instead of drifting.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1785461286,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1839041357037102",
+    "title": "0.10.186",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357037102",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][/p][previewyoutube=\"ihDYdg1OcuE;full\"][/previewyoutube][p]I added a new track to Stage 2, Lake Tangle 0. It's a two-lap circuit that winds between the Lake Tangle tracks and their new support pillars. It's technical and requires actual braking, but is signposted and has guardrails.[/p][list][*][p]Improved car stability when bumping walls[/p][/*][*][p]Fixed an issue where the car could bottom out and bounce off the track on a concave curve (i.e. a tight turn or the inside of a loop)[/p][/*][*][p]Added Lake Tangle 0[/p][/*][*][p]Moved Rock Loop II to the Stage 2 difficulty class[/p][/*][*][p]Added dynamically generated support pillars to some tracks[/p][/*][*][p]Fixed a visual issue with colored tire skids being incorrectly illuminated when the car backfires[/p][/*][*][p]Fixed an issue where the car would run its collision stabilization routine after crossing the finish line[/p][/*][*][p]Made LODs more aggressive in the Lake Tangle tracks[/p][/*][/list][p][/p][h3]Performance Note[/h3][p]Ive been seeing some drops to 90FPS in Lake Tangle 0 on highest settings on my computer. This is not great, and I've been looking at ways to improve performance that I may start to implement in future updates.[/p][p]If you're curious, the track segments aren't being batched properly, and I'm going to try rebuilding the track with longer segments and automatic subdivisions on turns.[/p][p][/p][h3]Car Physics[/h3][p]The interesting part about the car wall stability and car bottoming out is that they're the same thing, and completely unrelated to what I thought they were before.[/p][p]I thought it was a problem with the physics parameters on the car's collision hull bouncing off things, so I set its bounciness to 0 and kept a small amount of friction so you couldn't game the tracks by just wallriding the outside guardrail with no loss of speed.[/p][p]As it turns out, the friction was also causing that bounce behavior. I couldn't tell you why, because it's hard to figure out how high speed objects behave in Unity when interacting with complex shapes (i.e. track meshes), but making its friction 0 fixed the problems. The car can bottom out on loops now and ride the guardrails without any unexpected behavior.[/p][p]You still do lose speed from riding the guardrails now, though. I just explicitly look at the collision data when it happens and see if it's a collision on the side of the car. If so I subtract a little (framerate-independent) speed.[/p][p][/p][p]That's all for now! I'm taking a much-needed vacation this weekend so I'm pushing out the update in the middle of the week to get some early feedback.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1785202093,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1839041357028663",
+    "title": "0.10.177",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357028663",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list][*][p]Added colored smoke for some wheels[/p][/*][*][p]Added colored skids for some wheels[/p][/*][*][p]Added the ability to see playing ghosts in a race without restarting[/p][/*][*][p]Added basic vibration support for PS5 controllers (trigger haptics are a whole other can of worms)[/p][/*][*][p]Fixed a bug where tracks with gold medal override times could change how the author time was displayed in the main menu[/p][/*][*][p]Added support for more framerate options[/p][/*][/list][p]There are more tracks in the works as well.[/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1784875185,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1839041357023118",
+    "title": "0.10.170",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1839041357023118",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "I fixed it for real this time, I swear",
+    "feedlabel": "Community Announcements",
+    "date": 1784698837,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1838407329258204",
+    "title": "0.10.168",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1838407329258204",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "- added leaderboard score submission on level load\n- fixed a bug where leaderboard scores would take a while to properly submit",
+    "feedlabel": "Community Announcements",
+    "date": 1784249884,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1837955055355758",
+    "title": "0.10.162",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1837955055355758",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list]\n[*] fixed an issue where the car could be sped up or slowed down when driving towards the outside of a twisting magnetic track\n[*] some internal Steam logic consolidation to prepare for backend switching (which will in turn possibly enable leaderboard ghosts)\n[/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1783657902,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165582365",
+    "title": "0.10.160 - Handling Stability, New Track & Demo Update",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165582365",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][img src=\"{STEAM_CLAN_IMAGE}/45829248/c6124939f704d75f7fbc8392b6699198cf8c725a.png\"][/img][/p][p]Recognize this view? I turned the small level I made for the title track into a Stage 4, based on its existing difficulty level.[/p][p][/p][h2]All Changes[/h2][list][*][p]fixed an issue where the car could be flung off a magnetic track if the start or end of the track was pointing at the car’s current position[/p][/*][*][p]added a new track, Title Track[/p][/*][*][p]uploaded a new build of the demo. no new tracks, but it has the tow hook charms and the slightly improved magnetic track physics (on the one magnetic track included in the demo, First Inversion)[/p][/*][/list][p]You can watch a recording of a sub-author time here:[/p][p][/p][previewyoutube=\"5SFiQIEOpwI;full\"][/previewyoutube]",
+    "feedlabel": "Community Announcements",
+    "date": 1783577465,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165579739",
+    "title": "0.10.158 - New Cosmetics & New Track",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165579739",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p][img src=\"{STEAM_CLAN_IMAGE}/45829248/4a110e9d0702101d4680d187f811097dccda56c5.png\"][/img][/p][p]This update brings a fun new Stage 4 track, as well as a new type of cosmetics: Tow Hook Charms. I'll let you discover the existing ones for yourself. More are planned, as well as more achievements to unlock them.[/p][p]Camera behavior has also been tweaked to improve lookahead on convex magnetic surfaces, as well as many more things under the hood, as it were.[/p][p][/p][h2]All Changes[/h2][list][*][p]added a new multilap track, Mobius Coaster (two laps, with a twist)[/p][/*][*][p]updated car customization UI (WIP, still working on readability)[/p][/*][*][p]added customizable tow hook charms[/p][/*][*][p]improved car handling on magnetic tracks[/p][/*][*][p]added a link to the OST on Bandcamp[/p][/*][*][p]fixed a bug where songs would transition too early[/p][/*][*][p]increased clutch responsiveness when using a button-based input, pedal clutch input is unchanged[/p][/*][*][p]improved shifting responsiveness when using an axis-based input (now only required to move 1/4 of the way to shift)[/p][/*][/list][p]Here's the current world record of the new track.[/p][p][/p][previewyoutube=\"mnOOWA-Dfug;full\"][/previewyoutube]",
+    "feedlabel": "Community Announcements",
+    "date": 1783494575,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240
+   },
+   {
+    "gid": "1836506165566731",
+    "title": "0.10.130",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165566731",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list]\n[*] fixed a bug where you could navigate the tutorials without closing the initial shift mode dialog\n[*] allowed righting the car by turning left/right if it’s upside down\n[/list]\n\nI'll be trying to stick to 1 new track per week (ish) to finish the campaign in 6 months. Hopefully it will go faster than that, but you never know! I will also be regularly fixing bugs and adding quality-of-life things though, and adding new customization if there's time.",
+    "feedlabel": "Community Announcements",
+    "date": 1782953558,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165564369",
+    "title": "0.10.129",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165564369",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[list]\n[*] made camera snappier when rotating its local up vector to match the car’s up vector\n[*] re-recorded the author ghost on Loop Transfer\n[*] fixed camera following so it wouldn’t clip into the track if the car was following  a convex rollercoaster track at high speeds\n[/list]",
+    "feedlabel": "Community Announcements",
+    "date": 1782884611,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165561621",
+    "title": "0.10.126 - Visibility & Consistency",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165561621",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[h1]0.10.126 - Visibility & Consistency[/h1]\n\nThis patch improves lighting and camera behavior, as well as some improvements to handling when landing on boost pads. You'll still need to land with at least one wheel and not bounce the nose off the track, but landings, especially on Second Inversion, should feel much more consistent now.\n\nI also updated camera feel. In my code to smooth it, I had accidentally made it somewhat framerate-dependent, so this update decouples it from the framerate.\n\n[h2]All Changes[/h2]\n\n[list]\n[*] increased camera snappiness\n[*] standardized landing behavior on magnetic tracks at high speed\n[*] updated ramp readability by making the chevrons glow in the dark\n[*] updated lighting in Second Inversion\n[*] added another line of boost pads in Second Inversion\n[/list]\n\nIf you're curious about the code behind the magnetic tracks, you can find it on my [url=https://7cr.co/blog/2026/06/29/magnets.html]blog[/url].",
+    "feedlabel": "Community Announcements",
+    "date": 1782801658,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165559186",
+    "title": "0.10.117 - Second Inversion",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165559186",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[img]https://64.media.tumblr.com/3babd9390a5ecd9c8790a71efe1aec35/0a46216d6210b5ec-4f/s2048x3072/3dbfd2b5b9d028942bb2d2caf59dac6045c13093.png[/img]\n\n[h1]First Track Update (+Bugfixes)[/h1]\n\n[list]\n[*] Added a new track to Stage 2, Second Inversion\n[*] fixed a UI bug where time splits would be displayed incorrectly on multilap tracks\n[*] optimized garbage collection on frequently-updating timer UI elements\n[*] fixed a bug where disconnecting the controller or opening the Steam overlay would open the pause menu when it wouldn’t ordinarily be allowed to open\n[*] removed the link to the Steam page from the main menu\n[*] updated the feedback icon in the main menu\n[*] reset the car body roll on respawn\n[*] support limiting to 90 FPS\n[*] removed the rock jutting on the second-to-last turn outside of Canyon Bends and extended the guardrail\n[*] added music credits\n[*] fixed a bug where switching songs would make the game hang for a moment\n[*] fixed a bug where crossing finish lines on multilap tracks might not register correctly\n[/list]\n\nI will be working on more tracks and potentially improving the magnet track logic if need be this week. Thanks for playing!",
+    "feedlabel": "Community Announcements",
+    "date": 1782703832,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   },
+   {
+    "gid": "1836506165555626",
+    "title": "0.10.105b - Tiny Patch",
+    "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1836506165555626",
+    "is_external_url": true,
+    "author": "crane",
+    "contents": "[p]Thanks for the immediate reporting.[/p][list][*][p]fixed a bug where button sounds for the main menu wouldn't be played and result in some null errors[/p][/*][*][p]fixed a bug where the first \"OK\" button in the Manual and Driving tutorials wouldn't be selected on level start[/p][/*][/list][p]More updates coming soon![/p]",
+    "feedlabel": "Community Announcements",
+    "date": 1782523468,
+    "feedname": "steam_community_announcements",
+    "feed_type": 1,
+    "appid": 2804240,
+    "tags": [
+     "patchnotes"
+    ]
+   }
+  ],
+  "count": 36
+ }
+}

@@ -1,0 +1,120 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image img {
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+/* The fallback logo is square; show all of it on its own orange background. */
+.fallback {
+  background: var(--orange);
+}
+
+.fallback img {
+  object-fit: contain;
+}
+
+.card:hover .image img {
+  transform: scale(1.03);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: clamp(24px, 1.67vw, 32px) clamp(24px, 1.875vw, 36px) clamp(28px, 1.875vw, 36px);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.meta time {
+  letter-spacing: 0.06em;
+  opacity: 0.55;
+}
+
+.tag {
+  padding: 4px 10px 2px;
+  border-radius: 2px;
+  background: var(--orange);
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-family: var(--font-bebas), sans-serif;
+  font-weight: 400;
+  font-size: clamp(32px, 2.08vw, 40px);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.excerpt {
+  font-size: 18px;
+  opacity: 0.7;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding-top: 8px;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+/* Make the whole card clickable */
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.arrow {
+  font-family: var(--font-plex), sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  transition: transform 0.15s;
+}
+
+.card:hover .arrow {
+  transform: translateX(4px);
+}

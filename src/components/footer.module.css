@@ -1,0 +1,67 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 48px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 48px;
+}
+
+.logo {
+  display: block;
+  width: clamp(120px, 9.4vw, 180px);
+  aspect-ratio: 1232 / 453;
+  background-color: rgb(var(--fg-rgb));
+  mask: url("/logo.png") center / contain no-repeat;
+}
+
+.right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 48px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 40px;
+}
+
+.link {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.link:hover,
+.link[aria-current="page"] {
+  opacity: 1;
+}
+
+.copyright {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+/* Dark theme: disabled for now.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .footer {
+    border-top-color: transparent;
+  }
+}
+
+:root[data-theme="dark"] .footer {
+  border-top-color: transparent;
+}
+*/

@@ -1,0 +1,93 @@
+:root {
+  --orange: #fe7c42;
+  --orange-deep: #c2410c;
+  --ink: #0b0b0d;
+  --card-dark: #16161a;
+  --paper: #f6f5f3;
+  --white: #ffffff;
+
+  --content-width: 1680px;
+  --gutter: clamp(16px, 6.25vw, 120px);
+
+  /* Light theme */
+  --bg: var(--paper);
+  --bg-rgb: 246 245 243;
+  --fg-rgb: 11 11 13;
+  --surface: var(--white);
+  --accent-text: var(--orange-deep);
+  --border: rgb(var(--fg-rgb) / 0.08);
+  --outline: rgb(var(--fg-rgb) / 0.3);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Dark theme: disabled for now, light is the only colour scheme.
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: var(--ink);
+    --bg-rgb: 11 11 13;
+    --fg-rgb: 255 255 255;
+    --surface: var(--card-dark);
+    --accent-text: var(--orange);
+    --outline: rgb(var(--fg-rgb) / 0.4);
+    --card-shadow: none;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--ink);
+  --bg-rgb: 11 11 13;
+  --fg-rgb: 255 255 255;
+  --surface: var(--card-dark);
+  --accent-text: var(--orange);
+  --outline: rgb(var(--fg-rgb) / 0.4);
+  --card-shadow: none;
+  color-scheme: dark;
+}
+*/
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(var(--fg-rgb));
+  background: var(--bg);
+  font-family: var(--font-plex), sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout */
+
+.container {
+  width: 100%;
+  max-width: calc(var(--content-width) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: clamp(64px, 6.25vw, 120px) 0 clamp(80px, 8.33vw, 160px);
+}
