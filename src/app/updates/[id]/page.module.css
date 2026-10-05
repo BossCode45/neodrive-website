@@ -195,3 +195,8 @@
   border: 1px solid var(--border);
   text-align: left;
 }
+
+.error {
+  font-size: 18px;
+  opacity: 0.7;
+}

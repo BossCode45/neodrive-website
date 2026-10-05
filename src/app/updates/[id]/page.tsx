@@ -24,15 +24,34 @@ export async function generateMetadata({ params }: PageProps<"/updates/[id]">): 
 export default async function UpdatePage({ params }: PageProps<"/updates/[id]">) {
   await connection(); // render per request from the in-memory Steam cache, not at build time
   const { id } = await params;
-  const update = await getUpdate(id);
-  if (!update) notFound();
+  // null: Steam has no such post. undefined: Steam couldn't be reached.
+  const update = await getUpdate(id).catch((error) => {
+	console.error(`[updates/${id}]`, error);
+	return undefined;
+  });
+  if (update === null) notFound();
+
+  const back = (
+	<Link href="/updates" className={styles.back}>
+	  <span aria-hidden="true">←</span> All updates
+	</Link>
+  );
+
+  if (!update) {
+	return (
+	  <main className={`container ${styles.page}`}>
+		<article className={styles.article}>
+		  {back}
+		  <p className={styles.error}>This update couldn&apos;t be loaded from Steam right now. Please try again in a minute.</p>
+		</article>
+	  </main>
+	);
+  }
 
   return (
 	<main className={`container ${styles.page}`}>
 	  <article className={styles.article}>
-		<Link href="/updates" className={styles.back}>
-		  <span aria-hidden="true">←</span> All updates
-		</Link>
+		{back}
 
 		<header className={styles.header}>
 		  <div className={styles.meta}>

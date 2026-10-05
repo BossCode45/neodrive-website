@@ -1,0 +1,38 @@
+/* Shared by not-found.tsx and error.tsx. */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding-top: clamp(64px, 6.25vw, 120px);
+  padding-bottom: clamp(80px, 8.33vw, 160px);
+}
+
+.title {
+  font-family: var(--font-exo2), sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(56px, 6.67vw, 128px);
+  letter-spacing: -0.01em;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 40em;
+  font-size: clamp(18px, 1.25vw, 24px);
+  opacity: 0.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.actions button {
+  cursor: pointer;
+  background: none;
+}

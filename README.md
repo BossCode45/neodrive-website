@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neodrive website
 
-## Getting Started
+Marketing site for [NEODRIVE](https://store.steampowered.com/app/2804240), a high speed time-attack racing game.
+Next.js (App Router) with live data from Steam: update posts from the news API and per-track leaderboards.
 
-First, run the development server:
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+nix develop     # or direnv: node, pnpm
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm test       # vitest, against recorded Steam fixtures in test/fixtures
+pnpm lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Optional: set `STEAM_API_KEY` (in `.env.local`) to look up player names and avatars with the Steam Web API.
+Without it, each player's public profile XML is used instead.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploying on NixOS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The flake exports a package (`packages.<system>.default`, a Next.js standalone server) and a NixOS module
+(`nixosModules.default`) that runs it as a hardened systemd service behind nginx, with a Let's Encrypt
+certificate from `security.acme`.
 
-## Learn More
+1. Point a DNS A/AAAA record for the subdomain at the server. The ACME HTTP challenge needs it.
+2. In the server's flake:
 
-To learn more about Next.js, take a look at the following resources:
+   ```nix
+   {
+     inputs.neodrive-website.url = "github:BossCode45/neodrive-website";
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+     outputs = { nixpkgs, neodrive-website, ... }: {
+       nixosConfigurations.server = nixpkgs.lib.nixosSystem {
+         modules = [
+           neodrive-website.nixosModules.default
+           {
+             services.neodrive-website = {
+               enable = true;
+               domain = "neodrive.example.com";
+               # environmentFile = "/run/secrets/neodrive-website.env"; # STEAM_API_KEY=...
+             };
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+             # Only if ACME isn't configured on the server yet:
+             security.acme.acceptTerms = true;
+             security.acme.defaults.email = "you@example.com";
+           }
+         ];
+       };
+     };
+   }
+   ```
 
-## Deploy on Vercel
+3. `nixos-rebuild switch`. To deploy a new version later: `nix flake update neodrive-website && nixos-rebuild switch`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Module options (`services.neodrive-website.*`):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Option            | Default | Description                                                              |
+|-------------------|---------|--------------------------------------------------------------------------|
+| `enable`          | `false` | Run the site.                                                            |
+| `domain`          | —       | nginx virtual host name.                                                 |
+| `port`            | `3000`  | Port the Node server listens on, on 127.0.0.1 only.                      |
+| `environmentFile` | `null`  | Extra environment (e.g. `STEAM_API_KEY`), kept out of the Nix store.     |
+| `configureNginx`  | `true`  | Add the nginx vhost (`enableACME`, `forceSSL`, HSTS, static asset cache). |
+| `package`         | flake   | The package to run.                                                      |
+
+The service runs as a `DynamicUser`. The image optimizer cache is in `/var/cache/neodrive-website`.
+Logs: `journalctl -u neodrive-website`.
+
+### Updating dependencies
+
+`nix/package.nix` pins the pnpm dependencies by hash. After changing `pnpm-lock.yaml`, set `hash = lib.fakeHash;`,
+run `nix build`, and copy the hash it reports into the file.
+
+### Checks
+
+`nix flake check` builds the package (which runs the tests) and boots a NixOS VM with the module. The VM has no
+network, so this also checks that every page still renders when Steam is unreachable.
