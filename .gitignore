@@ -42,3 +42,6 @@ next-env.d.ts
 
 # direnv
 /.direnv/
+
+# nix build output
+/result

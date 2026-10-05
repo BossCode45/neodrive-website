@@ -1,37 +1,37 @@
 import type { Metadata } from "next";
-import {
-  Bebas_Neue,
-  Exo_2,
-  IBM_Plex_Sans_Condensed,
-  JetBrains_Mono,
-} from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const exo2 = Exo_2({
+// Google Fonts (OFL, see fonts/OFL-*.txt), vendored so builds don't need network access.
+const exo2 = localFont({
   variable: "--font-exo2",
-  subsets: ["latin"],
+  src: "./fonts/exo-2-latin-800-italic.woff2",
   weight: "800",
   style: "italic",
 });
 
-const bebasNeue = Bebas_Neue({
+const bebasNeue = localFont({
   variable: "--font-bebas",
-  subsets: ["latin"],
+  src: "./fonts/bebas-neue-latin-400-normal.woff2",
   weight: "400",
 });
 
-const plexCondensed = IBM_Plex_Sans_Condensed({
+const plexCondensed = localFont({
   variable: "--font-plex",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  src: [
+    { path: "./fonts/ibm-plex-sans-condensed-latin-400-normal.woff2", weight: "400" },
+    { path: "./fonts/ibm-plex-sans-condensed-latin-500-normal.woff2", weight: "500" },
+  ],
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = localFont({
   variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["500", "700"],
+  src: [
+    { path: "./fonts/jetbrains-mono-latin-500-normal.woff2", weight: "500" },
+    { path: "./fonts/jetbrains-mono-latin-700-normal.woff2", weight: "700" },
+  ],
 });
 
 export const metadata: Metadata = {

@@ -6,7 +6,6 @@ import { steamStoreUrl } from "@/components/site-links";
 import LatestUpdateButton from "./latest-update-button";
 import styles from "./page.module.css";
 
-// TODO: Placeholder copy. Replace with the text from the Figma home frame (17:2).
 const features = [
   { title: "Easy to pickup, hard to master", body: "Simple controls get you on the tracks immediately, but a manual gearbox leaves a high skill ceiling." },
   { title: "Instant respawns", body: "Time attack racing with no waiting around. Respawn or restart instantly after a crash." },
@@ -64,7 +63,7 @@ export default function Home() {
 		<div className={`container ${styles.showcase}`}>
 		  <Image
 			src="/images/showcase.png"
-			alt="A picture of the two cards in NEODRIVE"
+			alt="A picture of the two cars in NEODRIVE"
 			width={1920}
 			height={1080}
 			sizes="(max-width: 900px) 100vw, 50vw"
@@ -72,9 +71,9 @@ export default function Home() {
 		  />
 		  <div className={styles.showcaseCopy}>
 			<Eyebrow>Leaderboards</Eyebrow>
-			<h2 className={styles.showcaseTitle}>Showcase title placeholder</h2>
+			<h2 className={styles.showcaseTitle}>Check out the best times</h2>
 			<p className={styles.body}>
-			  Placeholder showcase text. Replace with the leaderboard copy from Figma.
+			  See where you rank against everyone else.
 			</p>
 			<div className={styles.actions}>
 			  <ButtonLink href="/leaderboard">View leaderboard</ButtonLink>
