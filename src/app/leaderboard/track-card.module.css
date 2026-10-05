@@ -1,0 +1,85 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.15s;
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.image img {
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: clamp(32px, 2.5vw, 48px);
+  height: auto;
+  color: var(--white);
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.5));
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 64px;
+  padding: 10px clamp(14px, 1vw, 20px);
+  transition: background 0.15s, color 0.15s;
+}
+
+.code {
+  flex: none;
+  font-family: var(--font-exo2), sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: clamp(28px, 1.875vw, 36px);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--accent-text);
+  transition: color 0.15s;
+}
+
+.name {
+  min-width: 0;
+  font-weight: 500;
+  font-size: clamp(16px, 0.94vw, 18px);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The Figma "selected" card: orange label row and a 3px orange border. */
+.card:hover,
+.card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--orange), var(--card-shadow);
+}
+
+.card:hover .label,
+.card:focus-visible .label {
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.card:hover .code,
+.card:focus-visible .code {
+  color: var(--ink);
+}
+
+.card:hover .image img {
+  transform: scale(1.03);
+}
