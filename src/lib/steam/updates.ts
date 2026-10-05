@@ -66,6 +66,14 @@ export function getUpdates(): Promise<UpdateSummary[]> {
   return loadAll().then((updates) => updates.map(toSummary));
 }
 
+const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+
+/** The newest update if it was posted within `maxAgeMs` (default one week), otherwise null. */
+export async function getRecentUpdate(maxAgeMs = WEEK_MS): Promise<UpdateSummary | null> {
+  const [latest] = await getUpdates();
+  return latest && Date.now() - Date.parse(latest.date) <= maxAgeMs ? latest : null;
+}
+
 /** One update with its full body, or null if Steam has no post with this id. Cached for 60s. */
 export async function getUpdate(id: string): Promise<Update | null> {
   const hit = peek<Update>(`updates:${id}`);

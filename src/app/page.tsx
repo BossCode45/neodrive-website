@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import ButtonLink from "@/components/button-link";
 import Eyebrow from "@/components/eyebrow";
 import { steamStoreUrl } from "@/components/site-links";
+import LatestUpdateButton from "./latest-update-button";
 import styles from "./page.module.css";
 
 // TODO: Placeholder copy. Replace with the text from the Figma home frame (17:2).
@@ -25,6 +27,9 @@ export default function Home() {
 		/>
 		<div className={styles.heroScrim}/>
 		<div className={`container ${styles.heroContent}`}>
+		  <Suspense fallback={null}>
+			<LatestUpdateButton/>
+		  </Suspense>
 		  <Eyebrow>Time attack racing</Eyebrow>
 		  <h1 className={styles.heroTitle}>A high speed<br/>racing game</h1>
 		  <p className={styles.intro}>

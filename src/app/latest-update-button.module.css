@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  padding: 8px 16px 8px 8px;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: clamp(18px, 1.15vw, 22px);
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.15s;
+}
+
+.button:hover {
+  border-color: var(--orange);
+}
+
+.tag {
+  flex: none;
+  padding: 3px 8px 1px;
+  border-radius: 2px;
+  background: var(--orange);
+  color: var(--ink);
+}
+
+.text {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.arrow {
+  flex: none;
+  font-family: var(--font-plex), sans-serif;
+  font-weight: 500;
+  color: var(--accent-text);
+  transition: transform 0.15s;
+}
+
+.button:hover .arrow {
+  transform: translateX(4px);
+}

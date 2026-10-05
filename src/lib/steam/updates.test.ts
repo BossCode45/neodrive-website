@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { EVENTS_HOST, mockSteam, NEWS_HOST } from "../../../test/steam-fetch-mock";
 import { clearCache } from "./cache";
-import { getUpdate, getUpdates, parseTitle } from "./updates";
+import { getRecentUpdate, getUpdate, getUpdates, parseTitle } from "./updates";
 
 beforeEach(() => clearCache());
 
@@ -90,5 +90,21 @@ describe("getUpdate", () => {
     await getUpdates();
     expect(await getUpdate("123")).toBeNull();
     expect(callsTo(NEWS_HOST)).toBe(1);
+  });
+});
+
+describe("getRecentUpdate", () => {
+  // The newest post in the fixture is 2026-10-03T21:55:22Z.
+  afterEach(() => vi.useRealTimers());
+
+  it.each([
+    ["2026-10-05T12:00:00Z", "1845383656390048"],
+    ["2026-10-10T21:55:22Z", "1845383656390048"], // exactly one week later
+    ["2026-10-10T21:55:23Z", null],
+  ])("at %s returns %s", async (now, expectedId) => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date(now));
+    mockSteam();
+    expect((await getRecentUpdate())?.id ?? null).toBe(expectedId);
   });
 });
