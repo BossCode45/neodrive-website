@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { EVENTS_HOST, mockSteam, NEWS_HOST } from "../../../test/steam-fetch-mock";
+import { EVENTS_HOST, eventsFixture, mockSteam, NEWS_HOST } from "../../../test/steam-fetch-mock";
 import { clearCache } from "./cache";
 import { getRecentUpdate, getUpdate, getUpdates, parseTitle } from "./updates";
 
@@ -71,6 +71,14 @@ describe("getUpdates", () => {
     });
     const [first] = await getUpdates();
     expect(first.image.url).toMatch(/clan\.akamai\.steamstatic\.com/); // falls back to the first inline image
+  });
+
+  it("keeps the other events' images when one event has no name", async () => {
+    mockSteam({
+      [EVENTS_HOST]: () => Response.json({ ...eventsFixture, events: [{ event_type: 28 }, ...eventsFixture.events] }),
+    });
+    const [first] = await getUpdates();
+    expect(first.image.url).toMatch(/9eb9f5d5a0e29a7e7c48b015c07b9212bc5fe9d5/); // the capsule from the events endpoint
   });
 });
 

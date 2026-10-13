@@ -11,7 +11,7 @@
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "neodrive-website";
-  version = "0.1.0";
+  version = "0.1.1";
 
   src = lib.fileset.toSource {
     root = ../.;
@@ -32,7 +32,7 @@ stdenvNoCC.mkDerivation (finalAttrs: {
     inherit (finalAttrs) pname version src;
     inherit pnpm;
     fetcherVersion = 4;
-    hash = "sha256-upeRkwUiwQSEabVIUY3SkdpZfsvTtmXncspdqoMiMQ8=";
+    hash = "sha256-X3Vg2dSZJKBxxlWmrpn9WPGFI6nGJ5fS2aDjE+bGcog=";
   };
 
   nativeBuildInputs = [

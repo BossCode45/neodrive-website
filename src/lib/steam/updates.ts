@@ -45,7 +45,7 @@ type NewsResponse = {
 
 type EventsResponse = {
   events?: {
-    event_name: string;
+    event_name?: string;
     event_type: number;
     jsondata?: string;
     announcement_body?: { clanid?: string; posttime?: number };
@@ -129,7 +129,7 @@ async function fetchEvents(): Promise<EventInfo[]> {
       };
 
       return {
-        title: event.event_name.trim(),
+        title: (event.event_name ?? "").trim(),
         posttime: event.announcement_body?.posttime,
         type: event.event_type,
         banner: first("localized_title_image"),

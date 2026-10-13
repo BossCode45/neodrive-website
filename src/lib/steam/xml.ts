@@ -20,7 +20,7 @@ export function xmlText(xml: string, tag: string): string | null {
   return inner.trim().replace(/&(#x[0-9a-f]+|#\d+|\w+);/gi, (entity, name: string) => {
     if (name[0] === "#") {
       const code = name[1].toLowerCase() === "x" ? Number.parseInt(name.slice(2), 16) : Number.parseInt(name.slice(1), 10);
-      return Number.isNaN(code) ? entity : String.fromCodePoint(code);
+      return Number.isNaN(code) || code > 0x10ffff ? entity : String.fromCodePoint(code);
     }
     return ENTITIES[name] ?? entity;
   });

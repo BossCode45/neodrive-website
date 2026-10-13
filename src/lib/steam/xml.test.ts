@@ -19,6 +19,10 @@ describe("xml", () => {
     expect(xmlText(b, "name")).toBe("Tom & Jerry ★ ☆");
   });
 
+  it("leaves out-of-range numeric entities as they are", () => {
+    expect(xmlText("<a>&#99999999;</a>", "a")).toBe("&#99999999;");
+  });
+
   it("returns null for a missing tag and tells similar tags apart", () => {
     expect(xmlText(xml, "missing")).toBeNull();
     expect(xmlHas(xml, "nextRequestURL")).toBe(true);

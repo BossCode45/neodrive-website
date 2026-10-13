@@ -18,6 +18,7 @@ async function request<T>(url: string, params: Record<string, string | number>, 
   for (const [key, value] of Object.entries(params)) target.searchParams.set(key, String(value));
 
   for (let attempt = 0; ; attempt++) {
+    let retryable = true;
     try {
       if (process.env.NODE_ENV !== "production") console.debug(`[steam] GET ${target.origin}${target.pathname}`);
       const res = await fetch(target, {
@@ -25,10 +26,14 @@ async function request<T>(url: string, params: Record<string, string | number>, 
         cache: "no-store", // our own in-memory cache decides freshness
         signal: AbortSignal.timeout(10_000),
       });
-      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+      if (!res.ok) {
+        // Client errors (bad API key, missing profile) won't succeed on retry; timeouts and rate limits might.
+        retryable = res.status >= 500 || res.status === 408 || res.status === 429;
+        throw new Error(`${res.status} ${res.statusText}`);
+      }
       return await read(res);
     } catch (error) {
-      if (attempt >= RETRY_DELAYS_MS.length) {
+      if (!retryable || attempt >= RETRY_DELAYS_MS.length) {
         throw new Error(`Steam request failed: ${target.origin}${target.pathname}`, { cause: error });
       }
       await new Promise((resolve) => setTimeout(resolve, RETRY_DELAYS_MS[attempt]));

@@ -69,11 +69,24 @@ describe("toHtml structure", () => {
     );
     expect(toHtml("[img]https://example.com/a.png[/img]")).toContain(`src="https://example.com/a.png"`);
   });
+
+  it("keeps the content after an unclosed [img src]", () => {
+    const html = toHtml(`[img src="https://a.com/1.png"][p]keep me[/p][img]https://a.com/2.png[/img]`);
+    expect(html).toContain("<p>keep me</p>");
+    expect(html).toContain(`src="https://a.com/1.png"`);
+    expect(html).toContain(`src="https://a.com/2.png"`);
+  });
 });
 
 describe("toExcerpt", () => {
   it("strips tags and keeps paragraph breaks", () => {
     expect(toExcerpt("[h2]Head[/h2][p]Body [b]text[/b][/p][list][*]item[/list]")).toBe("Head\n\nBody text\n\nitem");
+  });
+
+  it("leaves out image URLs and video ids", () => {
+    expect(toExcerpt(`[img]https://x.com/a.png[/img]\n[previewyoutube=dQw4w9WgXcQ;full][/previewyoutube][p]Hello[/p]`)).toBe("Hello");
+    const post = newsFixture.appnews.newsitems.find((item: { title: string }) => item.title.startsWith("0.10.117"));
+    expect(toExcerpt(post.contents)).toMatch(/^First Track Update/);
   });
 
   it("cuts long text at a word boundary", () => {

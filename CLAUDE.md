@@ -111,7 +111,8 @@ except player names and avatars. Send a `User-Agent` header, and retry failed re
    Each `<entries><entry>` has `rank`, `steamid`, `score`, `details` and `ugcid`.
    Keep paging (`start = end + 1`) while the response contains `<nextRequestURL>`.
 3. **Formatting scores**: lap boards use `time_milliseconds`, so `score` is in ms. Display it as `MM:SS.mmm`,
-   e.g. 9233 → `00:09.233`, to match the game. For `time_seconds`, use `M:SS`.
+   e.g. 9233 → `00:09.233`, to match the game. Leaderboard times always show milliseconds: a `time_seconds`
+   board is converted to ms (`score × 1000`) and shown in the same `MM:SS.mmm` format, never as `M:SS`.
 4. **Player names and avatars**: `GET https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v2/?key=<KEY>&steamids=<id,id,...>`
    takes up to 100 IDs per call. Use `personaname`, plus the `avatar` / `avatarmedium` / `avatarfull` URLs.
    It needs a Steam Web API key (from https://steamcommunity.com/dev/apikey), so call it server-side and never expose the key.

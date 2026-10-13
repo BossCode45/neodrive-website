@@ -13,10 +13,12 @@ export function resolveImageUrl(url: string) {
 }
 
 const BLOCK_TAGS = /\[\/?(p|h\d|list|olist|\*|quote|code|table|tr|hr)\]/gi;
+// Tags whose content is a URL or id, not text: drop them whole.
+const MEDIA_TAGS = /\[(img|previewyoutube)\b[^\]]*\][^[]*\[\/\1\]/gi;
 
 /** Plain-text excerpt for update cards. */
 export function toExcerpt(bbcode: string, maxLength = 300) {
-  let text = bbcode.replace(BLOCK_TAGS, "\n").replace(/\[[^\]]+\]/g, "");
+  let text = bbcode.replace(MEDIA_TAGS, "").replace(BLOCK_TAGS, "\n").replace(/\[[^\]]+\]/g, "");
   text = text.replace(/[ \t]*\n[ \t]*/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength).replace(/\s+\S*$/, "") + "…";
@@ -156,11 +158,13 @@ export function toHtml(bbcode: string) {
     text(before);
 
     if (name === "img" && !slash) {
+      // Only a [/img] with no other tag in between closes this image; `[img src=...]` is sometimes left unclosed.
       const close = bbcode.toLowerCase().indexOf("[/img]", cursor);
-      const inner = close === -1 ? "" : bbcode.slice(cursor, close);
+      const paired = close !== -1 && !bbcode.slice(cursor, close).includes("[");
+      const inner = paired ? bbcode.slice(cursor, close) : "";
       const src = safeUrl(tagArg(args, "src") ?? inner);
       if (src) out.push(imageHtml(src));
-      if (close !== -1) skipUntil = "img";
+      if (paired) skipUntil = "img";
       continue;
     }
 
